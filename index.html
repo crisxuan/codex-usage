@@ -13,6 +13,7 @@
       --muted: #62656f;
       --line: #ddd8cc;
       --blue: #3772ff;
+      --green: #0f9d58;
     }
     * { box-sizing: border-box; }
     body {
@@ -51,6 +52,15 @@
       border: 1px solid var(--blue);
       border-radius: 8px;
     }
+    .link + .link {
+      margin-left: 10px;
+      border-color: var(--green);
+      color: var(--green);
+    }
+    @media (max-width: 640px) {
+      .link { display: flex; width: max-content; }
+      .link + .link { margin-left: 0; }
+    }
   </style>
 </head>
 <body>
@@ -62,6 +72,7 @@
       <h2>每周用量统计</h2>
       <p>最近更新时间：2026-05-18 09:58 +08:00。</p>
       <a class="link" href="./usage/weekly-latest.html">打开最新每周用量统计</a>
+      <a class="link" href="./usage/hourly-latest.html">打开 3 小时滚动看板</a>
     </section>
   </main>
 </body>

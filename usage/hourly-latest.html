@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Codex 用量脉搏</title>
+<style>:root {
+      color-scheme: light;
+      --bg: #f6f7fb;
+      --panel: #ffffff;
+      --ink: #202124;
+      --muted: #62656f;
+      --line: #dfe3ea;
+      --blue: #3772ff;
+      --green: #0f9d58;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 15px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .page {
+      width: min(1120px, calc(100vw - 32px));
+      margin: 32px auto 56px;
+    }
+    h1, h2, p { margin: 0; }
+    h1 {
+      font-size: clamp(30px, 5vw, 52px);
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin-bottom: 14px;
+      font-size: 20px;
+    }
+    a { color: var(--blue); text-decoration: none; font-weight: 700; }
+    .crumb, .meta, .subtitle, .note, .footnote, .empty { color: var(--muted); }
+    .crumb { margin-bottom: 16px; }
+    .subtitle { margin-top: 12px; max-width: 860px; }
+    .meta { margin-top: 10px; font-size: 13px; }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .metric, .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .metric {
+      min-height: 112px;
+      padding: 16px;
+    }
+    .panel {
+      margin-top: 16px;
+      padding: 20px;
+    }
+    .label {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .value {
+      margin-top: 8px;
+      font-size: 28px;
+      line-height: 1.1;
+      font-weight: 760;
+    }
+    .note {
+      margin-top: 8px;
+      font-size: 13px;
+    }
+    .chart {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      font-weight: 650;
+    }
+    td:not(:first-child), th:not(:first-child) {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .footnote {
+      margin-top: 18px;
+      font-size: 13px;
+    }
+    @media (max-width: 800px) {
+      .page { width: min(100vw - 20px, 1120px); margin-top: 20px; }
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .value { font-size: 23px; }
+      .panel { padding: 14px; overflow-x: auto; }
+    }</style>
+</head>
+<body>
+<main class="page">
+<p class="crumb"><a href="../index.html">Codex Usage Estimator</a> / Usage Pulse</p>
+<header>
+<h1>Codex 用量脉搏</h1>
+<p class="subtitle">公开版滚动看板，来自本机 Codex token_count 日志的聚合结果。这里只发布汇总数值，不发布 session 路径或原始日志。</p>
+<p class="meta">生成时间: 2026-05-18T10:34:32+08:00</p>
+</header>
+<section class="metrics" aria-label="summary metrics">
+<div class="metric">
+<div class="label">Tokens</div>
+<div class="value">29,837,513</div>
+<div class="note">05-18 07:34 -&gt; 05-18 10:34</div>
+</div>
+<div class="metric">
+<div class="label">API 等价金额</div>
+<div class="value">$24.71</div>
+<div class="note">617.63</div>
+</div>
+<div class="metric">
+<div class="label">Weekly 剩余</div>
+<div class="value">95%</div>
+<div class="note">重置: 2026-05-24T08:14:44+08:00</div>
+</div>
+<div class="metric">
+<div class="label">事件数</div>
+<div class="value">687</div>
+<div class="note">Sessions: 5</div>
+</div>
+</section>
+<section class="panel">
+<h2>3 小时走势</h2>
+<svg class="chart" viewBox="0 0 1060 360" role="img" aria-label="3 小时走势">
+<rect x="0" y="0" width="1060" height="360" fill="#ffffff"/>
+<line x1="72" y1="254.00" x2="982" y2="254.00" stroke="#e6e8ee"/>
+<text x="18" y="258.00" fill="#62656f" font-size="12">0</text>
+<line x1="72" y1="199.00" x2="982" y2="199.00" stroke="#e6e8ee"/>
+<text x="18" y="203.00" fill="#62656f" font-size="12">7M</text>
+<line x1="72" y1="144.00" x2="982" y2="144.00" stroke="#e6e8ee"/>
+<text x="18" y="148.00" fill="#62656f" font-size="12">15M</text>
+<line x1="72" y1="89.00" x2="982" y2="89.00" stroke="#e6e8ee"/>
+<text x="18" y="93.00" fill="#62656f" font-size="12">22M</text>
+<line x1="72" y1="34.00" x2="982" y2="34.00" stroke="#e6e8ee"/>
+<text x="18" y="38.00" fill="#62656f" font-size="12">30M</text>
+<rect x="515.00" y="34.00" width="24.00" height="220.00" rx="4" fill="#3772ff"/>
+<text x="72.00" y="282" fill="#62656f" font-size="12">05-18 10:34</text>
+<circle cx="527.00" cy="45.00" r="4" fill="#0f9d58"/>
+<text x="72" y="326" fill="#202124" font-size="13">■ Tokens</text>
+<text x="222" y="326" fill="#0f9d58" font-size="13">● Weekly 剩余</text>
+</svg>
+</section>
+<section class="panel">
+<h2>Token 构成</h2>
+<svg class="chart" viewBox="0 0 1060 170" role="img" aria-label="Token 构成">
+<rect x="0" y="0" width="1060" height="170" fill="#ffffff"/>
+<rect x="50.00" y="46" width="908.95" height="38" fill="#2563eb"/>
+<text x="60.00" y="70" fill="#ffffff" font-size="13" font-weight="700">Cached input</text>
+<rect x="958.95" y="46" width="47.64" height="38" fill="#0f766e"/>
+<rect x="1006.59" y="46" width="3.41" height="38" fill="#d9801f"/>
+<rect x="50" y="116" width="12" height="12" rx="2" fill="#2563eb"/>
+<text x="68" y="127" fill="#202124" font-size="13">Cached input · 28,250,880</text>
+<rect x="360" y="116" width="12" height="12" rx="2" fill="#0f766e"/>
+<text x="378" y="127" fill="#202124" font-size="13">非缓存 input · 1,480,762</text>
+<rect x="670" y="116" width="12" height="12" rx="2" fill="#d9801f"/>
+<text x="688" y="127" fill="#202124" font-size="13">Output · 105,871</text>
+<text x="50" y="154" fill="#62656f" font-size="12">Reasoning: 41,030</text>
+</svg>
+</section>
+<section class="panel">
+<h2>限额</h2>
+<table><thead><tr><th>限额</th><th>已用</th><th>Weekly 剩余</th><th>重置</th></tr></thead><tbody><tr><td>primary</td><td>1%</td><td>99%</td><td>2026-05-18T15:29:40+08:00</td></tr><tr><td>secondary</td><td>5%</td><td>95%</td><td>2026-05-24T08:14:44+08:00</td></tr></tbody></table>
+</section>
+<section class="panel">
+<h2>快照记录</h2>
+<table><thead><tr><th>时间</th><th>窗口</th><th>Tokens</th><th>API 等价</th><th>剩余</th></tr></thead><tbody><tr><td>05-18 10:34</td><td>05-18 07:34 -&gt; 05-18 10:34</td><td>29,837,513</td><td>$24.71</td><td>95%</td></tr></tbody></table>
+</section>
+<p class="footnote">费用是 API 等价估算，不代表订阅真实账单。Reasoning token 已包含在 output token 中，不重复计费。</p>
+</main>
+</body>
+</html>
