@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codex 每周用量统计 2026-05-18</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f5ef;
+      --panel: #ffffff;
+      --ink: #202124;
+      --muted: #62656f;
+      --line: #ddd8cc;
+      --blue: #3772ff;
+      --green: #0f9d58;
+      --amber: #d9801f;
+      --red: #cc3d3d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 15px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      width: min(1120px, calc(100vw - 32px));
+      margin: 32px auto 56px;
+    }
+    h1, h2, p { margin: 0; }
+    h1 {
+      font-size: clamp(30px, 5vw, 52px);
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin-top: 28px;
+      font-size: 20px;
+    }
+    .subtitle {
+      margin-top: 12px;
+      color: var(--muted);
+      max-width: 860px;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .metric {
+      min-height: 112px;
+      padding: 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .label {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .value {
+      margin-top: 8px;
+      font-size: 28px;
+      line-height: 1.1;
+      font-weight: 760;
+    }
+    .note {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .panel {
+      margin-top: 16px;
+      padding: 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .chart {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      font-weight: 650;
+    }
+    td:not(:first-child), th:not(:first-child) {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .source {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 12px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #2f4bd1;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    @media (max-width: 800px) {
+      main { width: min(100vw - 20px, 1120px); margin-top: 20px; }
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .value { font-size: 23px; }
+      .panel { padding: 14px; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="../index.html">Codex Usage Estimator</a> / 每周用量统计</p>
+    <h1>Codex 每周用量统计</h1>
+    <p class="subtitle">公开版快照，生成于 2026-05-18 09:58 +08:00。所有数据来自本地 Codex <code>token_count</code> 日志的聚合结果，已去掉本机路径和完整 session 细节。</p>
+
+    <section class="metrics" aria-label="summary metrics">
+      <div class="metric">
+        <div class="label">近 7 天 total tokens</div>
+        <div class="value">25.66 亿</div>
+        <div class="note">2,565,709,289 tokens</div>
+      </div>
+      <div class="metric">
+        <div class="label">近 7 天 API 等价</div>
+        <div class="value">$1,950.56</div>
+        <div class="note">48,764.03 credits</div>
+      </div>
+      <div class="metric">
+        <div class="label">当前 weekly 窗口</div>
+        <div class="value">5,004.8 万</div>
+        <div class="note">reset 后累计 tokens</div>
+      </div>
+      <div class="metric">
+        <div class="label">当前 weekly 剩余</div>
+        <div class="value">96%</div>
+        <div class="note">按 reset May 24 窗口</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>近 7 天费用拆分</h2>
+      <table>
+        <thead>
+          <tr><th>项目</th><th>Tokens</th><th>API 单价</th><th>API 等价金额</th><th>Credits</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Cached input</td><td>2,451,030,912</td><td>$0.5 / 1M</td><td>$1,225.52</td><td>30,637.89</td></tr>
+          <tr><td>Non-cached input</td><td>108,612,220</td><td>$5 / 1M</td><td>$543.06</td><td>13,576.53</td></tr>
+          <tr><td>Output</td><td>6,066,157</td><td>$30 / 1M</td><td>$181.98</td><td>4,549.62</td></tr>
+          <tr><td><strong>合计</strong></td><td><strong>2,565,709,289</strong></td><td></td><td><strong>$1,950.56</strong></td><td><strong>48,764.03</strong></td></tr>
+        </tbody>
+      </table>
+      <p class="source">Reasoning tokens: 1,863,662，已包含在 output 中，不重复计费。</p>
+    </section>
+
+    <section class="panel">
+      <h2>每日趋势</h2>
+      <svg class="chart" viewBox="0 0 1060 430" role="img" aria-label="Daily token and cost chart">
+        <rect x="0" y="0" width="1060" height="430" fill="#ffffff"/>
+        <line x1="90" y1="330" x2="1000" y2="330" stroke="#ddd8cc"/>
+        <line x1="90" y1="260" x2="1000" y2="260" stroke="#eee9de"/>
+        <line x1="90" y1="190" x2="1000" y2="190" stroke="#eee9de"/>
+        <line x1="90" y1="120" x2="1000" y2="120" stroke="#eee9de"/>
+        <line x1="90" y1="50" x2="1000" y2="50" stroke="#eee9de"/>
+        <text x="20" y="54" fill="#62656f" font-size="12">720M</text>
+        <text x="20" y="194" fill="#62656f" font-size="12">360M</text>
+        <text x="20" y="334" fill="#62656f" font-size="12">0</text>
+
+        <rect x="112" y="50" width="66" height="280" rx="6" fill="#3772ff"/>
+        <text x="105" y="356" fill="#202124" font-size="12">05-11</text>
+        <text x="101" y="378" fill="#62656f" font-size="12">$512.72</text>
+
+        <rect x="234" y="136" width="66" height="194" rx="6" fill="#3772ff"/>
+        <text x="227" y="356" fill="#202124" font-size="12">05-12</text>
+        <text x="223" y="378" fill="#62656f" font-size="12">$381.60</text>
+
+        <rect x="356" y="178" width="66" height="152" rx="6" fill="#3772ff"/>
+        <text x="349" y="356" fill="#202124" font-size="12">05-13</text>
+        <text x="345" y="378" fill="#62656f" font-size="12">$300.79</text>
+
+        <rect x="478" y="138" width="66" height="192" rx="6" fill="#3772ff"/>
+        <text x="471" y="356" fill="#202124" font-size="12">05-14</text>
+        <text x="467" y="378" fill="#62656f" font-size="12">$375.97</text>
+
+        <rect x="600" y="136" width="66" height="194" rx="6" fill="#3772ff"/>
+        <text x="593" y="356" fill="#202124" font-size="12">05-15</text>
+        <text x="589" y="378" fill="#62656f" font-size="12">$383.81</text>
+
+        <rect x="722" y="211" width="66" height="119" rx="6" fill="#3772ff"/>
+        <text x="715" y="356" fill="#202124" font-size="12">05-16</text>
+        <text x="711" y="378" fill="#62656f" font-size="12">$221.20</text>
+
+        <rect x="844" y="324" width="66" height="6" rx="3" fill="#3772ff"/>
+        <text x="837" y="356" fill="#202124" font-size="12">05-17</text>
+        <text x="837" y="378" fill="#62656f" font-size="12">$17.68</text>
+
+        <rect x="966" y="316" width="66" height="14" rx="6" fill="#3772ff"/>
+        <text x="959" y="356" fill="#202124" font-size="12">05-18</text>
+        <text x="959" y="378" fill="#62656f" font-size="12">$31.26</text>
+
+        <text x="90" y="410" fill="#62656f" font-size="13">蓝色柱表示 calendar day total tokens；05-18 为截至 09:58 的局部数据。</text>
+      </svg>
+    </section>
+
+    <section class="panel">
+      <h2>当前 weekly 窗口</h2>
+      <table>
+        <thead>
+          <tr><th>窗口</th><th>时间</th><th>Total Tokens</th><th>API 等价金额</th><th>Used</th><th>Remaining</th><th>Reset</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="pill">current</span></td>
+            <td>2026-05-17 08:41 -> 2026-05-18 09:58</td>
+            <td>50,048,321</td>
+            <td>$47.35</td>
+            <td>4%</td>
+            <td>96%</td>
+            <td>2026-05-24 08:14</td>
+          </tr>
+          <tr>
+            <td>settings-like older window</td>
+            <td>legacy rate-limit snapshots</td>
+            <td></td>
+            <td></td>
+            <td>83%</td>
+            <td>17%</td>
+            <td>2026-05-20 14:34</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="source">如果 Settings 显示的 reset 日期和这里不同，按 reset 日期匹配对应窗口，不要只看最新快照。</p>
+    </section>
+
+    <section class="panel">
+      <h2>公开口径</h2>
+      <p>这份页面是聚合统计：不包含本机路径、完整 session 文件名或原始 transcript。费用是 API 等价估算，不代表订阅真实账单。默认价格口径：non-cached input $5 / 1M、cached input $0.5 / 1M、output $30 / 1M、25 credits / $1。</p>
+    </section>
+  </main>
+</body>
+</html>

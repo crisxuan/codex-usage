@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codex Usage Estimator</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f5ef;
+      --panel: #ffffff;
+      --ink: #202124;
+      --muted: #62656f;
+      --line: #ddd8cc;
+      --blue: #3772ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      width: min(960px, calc(100vw - 32px));
+      margin: 48px auto;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    p { margin: 12px 0 0; color: var(--muted); max-width: 720px; }
+    .panel {
+      margin-top: 28px;
+      padding: 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .link {
+      display: inline-flex;
+      margin-top: 18px;
+      padding: 10px 14px;
+      border: 1px solid var(--blue);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Codex Usage Estimator</h1>
+    <p>本页用于展示公开版 Codex 用量统计。报告只包含聚合后的 token、费用和限额窗口信息，不包含本机路径或完整 session 日志。</p>
+
+    <section class="panel">
+      <h2>每周用量统计</h2>
+      <p>最近更新时间：2026-05-18 09:58 +08:00。</p>
+      <a class="link" href="./usage/weekly-latest.html">打开最新每周用量统计</a>
+    </section>
+  </main>
+</body>
+</html>
