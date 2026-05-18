@@ -1,64 +1,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420" role="img" aria-labelledby="title desc">
-  <title id="title">Codex usage summary preview</title>
-  <desc id="desc">An anonymized example dashboard showing Codex token usage, cached input share, output tokens, and rate-limit snapshots.</desc>
+  <title id="title">Codex usage pulse preview</title>
+  <desc id="desc">An anonymized preview of the rolling Codex usage dashboard with token, cost, remaining quota, and three-hour trend charts.</desc>
   <defs>
     <style>
-      .bg { fill: #f7f5ef; }
-      .card { fill: #ffffff; stroke: #ddd8cc; stroke-width: 1; }
+      .bg { fill: #f6f7fb; }
+      .panel { fill: #ffffff; stroke: #dfe3ea; stroke-width: 1; }
       .ink { fill: #202124; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      .muted { fill: #636770; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .muted { fill: #62656f; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
       .mono { fill: #202124; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-      .green { fill: #0f9d58; }
       .blue { fill: #3772ff; }
+      .green { fill: #0f9d58; }
       .amber { fill: #d9801f; }
-      .red { fill: #cc3d3d; }
-      .line { stroke: #e5e0d5; stroke-width: 1; }
+      .grid { stroke: #e6e8ee; stroke-width: 1; }
+      .axis { stroke: #d8dde8; stroke-width: 1.2; }
     </style>
   </defs>
+
   <rect class="bg" width="920" height="420" rx="18"/>
 
-  <text class="ink" x="34" y="46" font-size="27" font-weight="750">Codex Usage Summary</text>
-  <text class="muted" x="34" y="72" font-size="14">Native token_count logs, local only, static HTML/SVG output</text>
-  <rect x="716" y="30" width="70" height="28" rx="14" fill="#e9f2ff"/>
-  <text class="muted" x="737" y="49" font-size="13">today</text>
-  <rect x="798" y="30" width="88" height="28" rx="14" fill="#eef7ef"/>
-  <text class="muted" x="818" y="49" font-size="13">--lang zh</text>
+  <text class="ink" x="34" y="48" font-size="27" font-weight="760">Codex Usage Pulse</text>
+  <text class="muted" x="34" y="74" font-size="14">Rolling public dashboard from local token_count aggregates</text>
+  <rect x="704" y="30" width="84" height="28" rx="14" fill="#edf4ff"/>
+  <text class="muted" x="724" y="49" font-size="13">3h pulse</text>
+  <rect x="800" y="30" width="86" height="28" rx="14" fill="#edf8f1"/>
+  <text class="muted" x="820" y="49" font-size="13">no paths</text>
 
-  <rect class="card" x="34" y="104" width="198" height="92" rx="8"/>
-  <text class="muted" x="54" y="132" font-size="13">Total tokens</text>
-  <text class="ink" x="54" y="167" font-size="31" font-weight="750">705.8M</text>
-  <text class="muted" x="54" y="185" font-size="12">18 sessions, 4,284 events</text>
+  <rect class="panel" x="34" y="104" width="198" height="92" rx="8"/>
+  <text class="muted" x="54" y="132" font-size="13">Tokens</text>
+  <text class="ink" x="54" y="166" font-size="31" font-weight="760">28.46M</text>
+  <text class="muted" x="54" y="185" font-size="12">last 3 hours</text>
 
-  <rect class="card" x="252" y="104" width="198" height="92" rx="8"/>
-  <text class="muted" x="272" y="132" font-size="13">Cached input</text>
-  <text class="ink" x="272" y="167" font-size="31" font-weight="750">680.9M</text>
-  <text class="green" x="272" y="185" font-size="12">96.6% of input</text>
+  <rect class="panel" x="252" y="104" width="198" height="92" rx="8"/>
+  <text class="muted" x="272" y="132" font-size="13">API equivalent</text>
+  <text class="ink" x="272" y="166" font-size="31" font-weight="760">$23.86</text>
+  <text class="muted" x="272" y="185" font-size="12">596.48 credits</text>
 
-  <rect class="card" x="470" y="104" width="198" height="92" rx="8"/>
-  <text class="muted" x="490" y="132" font-size="13">Output tokens</text>
-  <text class="ink" x="490" y="167" font-size="31" font-weight="750">1.44M</text>
-  <text class="muted" x="490" y="185" font-size="12">reasoning shown separately</text>
+  <rect class="panel" x="470" y="104" width="198" height="92" rx="8"/>
+  <text class="muted" x="490" y="132" font-size="13">Weekly remaining</text>
+  <text class="green" x="490" y="166" font-size="31" font-weight="760">95%</text>
+  <text class="muted" x="490" y="185" font-size="12">reset window matched</text>
 
-  <rect class="card" x="688" y="104" width="198" height="92" rx="8"/>
-  <text class="muted" x="708" y="132" font-size="13">Secondary limit</text>
-  <text class="ink" x="708" y="167" font-size="31" font-weight="750">54% -> 73%</text>
-  <text class="amber" x="708" y="185" font-size="12">+19% in this window</text>
+  <rect class="panel" x="688" y="104" width="198" height="92" rx="8"/>
+  <text class="muted" x="708" y="132" font-size="13">Events</text>
+  <text class="ink" x="708" y="166" font-size="31" font-weight="760">647</text>
+  <text class="muted" x="708" y="185" font-size="12">5 active sessions</text>
 
-  <rect class="card" x="34" y="222" width="852" height="154" rx="8"/>
-  <text class="ink" x="56" y="253" font-size="18" font-weight="700">Token mix</text>
-  <text class="muted" x="56" y="276" font-size="13">Cached input dominates long Codex sessions, while output stays small but expensive.</text>
+  <rect class="panel" x="34" y="222" width="852" height="154" rx="8"/>
+  <text class="ink" x="56" y="253" font-size="18" font-weight="720">3-hour trend</text>
+  <text class="muted" x="56" y="276" font-size="13">Blue bars show token volume; green line shows weekly remaining percent.</text>
 
-  <rect x="56" y="304" width="760" height="26" rx="6" fill="#eee9de"/>
-  <rect class="green" x="56" y="304" width="733" height="26" rx="6"/>
-  <rect class="amber" x="789" y="304" width="25" height="26"/>
-  <rect class="red" x="814" y="304" width="2" height="26" rx="1"/>
-  <text class="mono" x="56" y="354" font-size="12">cached input</text>
-  <circle class="green" cx="44" cy="350" r="5"/>
-  <text class="mono" x="176" y="354" font-size="12">non-cached input</text>
-  <circle class="amber" cx="164" cy="350" r="5"/>
-  <text class="mono" x="340" y="354" font-size="12">output</text>
-  <circle class="red" cx="328" cy="350" r="5"/>
+  <line class="grid" x1="78" y1="330" x2="832" y2="330"/>
+  <line class="grid" x1="78" y1="304" x2="832" y2="304"/>
+  <line class="grid" x1="78" y1="278" x2="832" y2="278"/>
+  <line class="axis" x1="78" y1="330" x2="832" y2="330"/>
 
-  <line class="line" x1="56" y1="292" x2="816" y2="292"/>
-  <text class="muted" x="826" y="324" font-size="13">100%</text>
+  <rect class="blue" x="96" y="304" width="28" height="26" rx="5"/>
+  <rect class="blue" x="156" y="286" width="28" height="44" rx="5"/>
+  <rect class="blue" x="216" y="296" width="28" height="34" rx="5"/>
+  <rect class="blue" x="276" y="266" width="28" height="64" rx="5"/>
+  <rect class="blue" x="336" y="250" width="28" height="80" rx="5"/>
+  <rect class="blue" x="396" y="272" width="28" height="58" rx="5"/>
+  <rect class="blue" x="456" y="236" width="28" height="94" rx="5"/>
+  <rect class="blue" x="516" y="244" width="28" height="86" rx="5"/>
+  <rect class="blue" x="576" y="258" width="28" height="72" rx="5"/>
+  <rect class="blue" x="636" y="282" width="28" height="48" rx="5"/>
+  <rect class="blue" x="696" y="292" width="28" height="38" rx="5"/>
+  <rect class="blue" x="756" y="256" width="28" height="74" rx="5"/>
+
+  <polyline points="110,242 170,244 230,246 290,248 350,249 410,251 470,252 530,254 590,255 650,256 710,258 770,259" fill="none" stroke="#0f9d58" stroke-width="3"/>
+  <circle class="green" cx="770" cy="259" r="4"/>
+
+  <text class="muted" x="78" y="354" font-size="12">05-17 00:00</text>
+  <text class="muted" x="725" y="354" font-size="12">05-18 09:00</text>
+  <circle class="blue" cx="590" cy="252" r="5"/>
+  <text class="muted" x="602" y="256" font-size="12">tokens</text>
+  <circle class="green" cx="664" cy="252" r="5"/>
+  <text class="muted" x="676" y="256" font-size="12">remaining</text>
 </svg>

@@ -1,36 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="450" height="360" viewBox="0 0 450 360" role="img" aria-labelledby="title desc">
-  <title id="title">Codex API-equivalent cost breakdown preview</title>
-  <desc id="desc">An anonymized example chart showing API-equivalent cost split by cached input, non-cached input, and output tokens.</desc>
+  <title id="title">Codex cost mix preview</title>
+  <desc id="desc">An anonymized preview card showing API-equivalent cost split by cached input, non-cached input, and output tokens.</desc>
   <defs>
     <style>
-      .bg { fill: #ffffff; stroke: #ddd8cc; stroke-width: 1; }
+      .panel { fill: #ffffff; stroke: #dfe3ea; stroke-width: 1; }
       .ink { fill: #202124; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      .muted { fill: #636770; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .muted { fill: #62656f; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
       .mono { fill: #202124; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-      .green { fill: #0f9d58; }
+      .blue { fill: #2563eb; }
+      .green { fill: #0f766e; }
       .amber { fill: #d9801f; }
-      .red { fill: #cc3d3d; }
-      .grid { stroke: #eee9de; stroke-width: 1; }
+      .line { stroke: #e6e8ee; stroke-width: 1; }
     </style>
   </defs>
-  <rect class="bg" x="1" y="1" width="448" height="358" rx="14"/>
-  <text class="ink" x="24" y="42" font-size="21" font-weight="750">Cost Estimate</text>
-  <text class="muted" x="24" y="66" font-size="13">API-equivalent, not your subscription bill</text>
 
-  <text class="muted" x="24" y="110" font-size="13">Total</text>
-  <text class="ink" x="24" y="148" font-size="38" font-weight="780">$500.56</text>
-  <text class="muted" x="24" y="170" font-size="13">12,514 credits at 25 credits/USD</text>
+  <rect class="panel" x="1" y="1" width="448" height="358" rx="10"/>
+  <text class="ink" x="24" y="42" font-size="21" font-weight="760">Cost Mix</text>
+  <text class="muted" x="24" y="66" font-size="13">API-equivalent estimate, not subscription billing</text>
 
-  <line class="grid" x1="24" y1="204" x2="426" y2="204"/>
-  <text class="muted" x="24" y="232" font-size="13">Cached input</text>
-  <rect class="green" x="150" y="216" width="236" height="22" rx="5"/>
-  <text class="mono" x="396" y="232" font-size="12">$340.47</text>
+  <text class="muted" x="24" y="110" font-size="13">Latest 3-hour window</text>
+  <text class="ink" x="24" y="148" font-size="38" font-weight="780">$23.86</text>
+  <text class="muted" x="24" y="171" font-size="13">28.46M tokens · 596.48 credits</text>
 
-  <text class="muted" x="24" y="272" font-size="13">Non-cached input</text>
-  <rect class="amber" x="150" y="256" width="81" height="22" rx="5"/>
-  <text class="mono" x="244" y="272" font-size="12">$116.87</text>
+  <rect x="24" y="202" width="402" height="26" rx="6" fill="#eef1f6"/>
+  <rect class="blue" x="24" y="202" width="244" height="26" rx="6"/>
+  <rect class="green" x="268" y="202" width="92" height="26"/>
+  <rect class="amber" x="360" y="202" width="66" height="26" rx="6"/>
 
-  <text class="muted" x="24" y="312" font-size="13">Output</text>
-  <rect class="red" x="150" y="296" width="30" height="22" rx="5"/>
-  <text class="mono" x="194" y="312" font-size="12">$43.22</text>
+  <line class="line" x1="24" y1="252" x2="426" y2="252"/>
+
+  <circle class="blue" cx="33" cy="278" r="6"/>
+  <text class="muted" x="48" y="282" font-size="13">Cached input</text>
+  <text class="mono" x="332" y="282" font-size="13">$13.45</text>
+
+  <circle class="green" cx="33" cy="310" r="6"/>
+  <text class="muted" x="48" y="314" font-size="13">Non-cached input</text>
+  <text class="mono" x="338" y="314" font-size="13">$7.33</text>
+
+  <circle class="amber" cx="33" cy="342" r="6"/>
+  <text class="muted" x="48" y="346" font-size="13">Output</text>
+  <text class="mono" x="338" y="346" font-size="13">$3.08</text>
 </svg>
