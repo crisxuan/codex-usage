@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420" role="img" aria-labelledby="title desc">
   <title id="title">Codex usage pulse preview</title>
-  <desc id="desc">An anonymized preview of the rolling Codex usage dashboard with token, cost, remaining quota, and three-hour trend charts.</desc>
+  <desc id="desc">An anonymized preview of the rolling Codex usage dashboard with token, cost, remaining quota, and configurable cadence charts.</desc>
   <defs>
     <style>
       .bg { fill: #f6f7fb; }
@@ -19,9 +19,9 @@
   <rect class="bg" width="920" height="420" rx="18"/>
 
   <text class="ink" x="34" y="48" font-size="27" font-weight="760">Codex Usage Pulse</text>
-  <text class="muted" x="34" y="74" font-size="14">Rolling public dashboard from local token_count aggregates</text>
+  <text class="muted" x="34" y="74" font-size="14">Configurable public dashboard from local token_count aggregates</text>
   <rect x="704" y="30" width="84" height="28" rx="14" fill="#edf4ff"/>
-  <text class="muted" x="724" y="49" font-size="13">3h pulse</text>
+  <text class="muted" x="720" y="49" font-size="13">3h demo</text>
   <rect x="800" y="30" width="86" height="28" rx="14" fill="#edf8f1"/>
   <text class="muted" x="820" y="49" font-size="13">no paths</text>
 
@@ -46,8 +46,8 @@
   <text class="muted" x="708" y="185" font-size="12">5 active sessions</text>
 
   <rect class="panel" x="34" y="222" width="852" height="154" rx="8"/>
-  <text class="ink" x="56" y="253" font-size="18" font-weight="720">3-hour trend</text>
-  <text class="muted" x="56" y="276" font-size="13">Blue bars show token volume; green line shows weekly remaining percent.</text>
+  <text class="ink" x="56" y="253" font-size="18" font-weight="720">Rolling trend</text>
+  <text class="muted" x="56" y="276" font-size="13">Choose your cadence; blue bars show token volume and green line shows remaining percent.</text>
 
   <line class="grid" x1="78" y1="330" x2="832" y2="330"/>
   <line class="grid" x1="78" y1="304" x2="832" y2="304"/>

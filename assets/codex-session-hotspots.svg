@@ -28,7 +28,7 @@
   <line class="line" x1="24" y1="214" x2="426" y2="214"/>
 
   <circle class="blue" cx="36" cy="244" r="7"/>
-  <text class="ink" x="56" y="240" font-size="15" font-weight="700">Largest 3h bucket</text>
+  <text class="ink" x="56" y="240" font-size="15" font-weight="700">Largest interval</text>
   <text class="muted" x="56" y="263" font-size="13">Anonymized usage snapshot</text>
   <text class="ink" x="324" y="251" font-size="18" font-weight="760">43.8M</text>
 

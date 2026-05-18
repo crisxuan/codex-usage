@@ -18,7 +18,7 @@
   <text class="ink" x="24" y="42" font-size="21" font-weight="760">Cost Mix</text>
   <text class="muted" x="24" y="66" font-size="13">API-equivalent estimate, not subscription billing</text>
 
-  <text class="muted" x="24" y="110" font-size="13">Latest 3-hour window</text>
+  <text class="muted" x="24" y="110" font-size="13">Latest monitored window</text>
   <text class="ink" x="24" y="148" font-size="38" font-weight="780">$23.86</text>
   <text class="muted" x="24" y="171" font-size="13">28.46M tokens · 596.48 credits</text>
 
