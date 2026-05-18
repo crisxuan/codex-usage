@@ -1,79 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420" role="img" aria-labelledby="title desc">
-  <title id="title">Codex usage pulse preview</title>
-  <desc id="desc">An anonymized preview of the rolling Codex usage dashboard with token, cost, remaining quota, and configurable cadence charts.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" viewBox="0 0 760 300" role="img" aria-labelledby="title desc">
+  <title id="title">Codex usage monitor preview</title>
+  <desc id="desc">An anonymized preview showing configurable Codex usage monitoring, rolling token snapshots, and public-safe aggregate data.</desc>
   <defs>
     <style>
       .bg { fill: #f6f7fb; }
       .panel { fill: #ffffff; stroke: #dfe3ea; stroke-width: 1; }
       .ink { fill: #202124; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
       .muted { fill: #62656f; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      .mono { fill: #202124; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
       .blue { fill: #3772ff; }
       .green { fill: #0f9d58; }
       .amber { fill: #d9801f; }
-      .grid { stroke: #e6e8ee; stroke-width: 1; }
-      .axis { stroke: #d8dde8; stroke-width: 1.2; }
+      .grid { stroke: #e7eaf1; stroke-width: 1; }
     </style>
   </defs>
 
-  <rect class="bg" width="920" height="420" rx="18"/>
+  <rect class="bg" width="760" height="300" rx="16"/>
 
-  <text class="ink" x="34" y="48" font-size="27" font-weight="760">Codex Usage Pulse</text>
-  <text class="muted" x="34" y="74" font-size="14">Configurable public dashboard from local token_count aggregates</text>
-  <rect x="704" y="30" width="84" height="28" rx="14" fill="#edf4ff"/>
-  <text class="muted" x="720" y="49" font-size="13">3h demo</text>
-  <rect x="800" y="30" width="86" height="28" rx="14" fill="#edf8f1"/>
-  <text class="muted" x="820" y="49" font-size="13">no paths</text>
+  <text class="ink" x="28" y="42" font-size="25" font-weight="760">Codex Usage Monitor</text>
+  <text class="muted" x="28" y="66" font-size="13">Open-source local usage tracking. Choose your own monitoring cadence.</text>
 
-  <rect class="panel" x="34" y="104" width="198" height="92" rx="8"/>
-  <text class="muted" x="54" y="132" font-size="13">Tokens</text>
-  <text class="ink" x="54" y="166" font-size="31" font-weight="760">28.46M</text>
-  <text class="muted" x="54" y="185" font-size="12">last 3 hours</text>
+  <rect x="532" y="24" width="84" height="28" rx="14" fill="#edf4ff"/>
+  <text class="muted" x="552" y="43" font-size="12">3h demo</text>
+  <rect x="626" y="24" width="104" height="28" rx="14" fill="#edf8f1"/>
+  <text class="muted" x="646" y="43" font-size="12">aggregate only</text>
 
-  <rect class="panel" x="252" y="104" width="198" height="92" rx="8"/>
-  <text class="muted" x="272" y="132" font-size="13">API equivalent</text>
-  <text class="ink" x="272" y="166" font-size="31" font-weight="760">$23.86</text>
-  <text class="muted" x="272" y="185" font-size="12">596.48 credits</text>
+  <rect class="panel" x="28" y="92" width="160" height="76" rx="8"/>
+  <text class="muted" x="44" y="118" font-size="12">Window tokens</text>
+  <text class="ink" x="44" y="150" font-size="27" font-weight="760">28.46M</text>
 
-  <rect class="panel" x="470" y="104" width="198" height="92" rx="8"/>
-  <text class="muted" x="490" y="132" font-size="13">Weekly remaining</text>
-  <text class="green" x="490" y="166" font-size="31" font-weight="760">95%</text>
-  <text class="muted" x="490" y="185" font-size="12">reset window matched</text>
+  <rect class="panel" x="204" y="92" width="160" height="76" rx="8"/>
+  <text class="muted" x="220" y="118" font-size="12">API equivalent</text>
+  <text class="ink" x="220" y="150" font-size="27" font-weight="760">$23.86</text>
 
-  <rect class="panel" x="688" y="104" width="198" height="92" rx="8"/>
-  <text class="muted" x="708" y="132" font-size="13">Events</text>
-  <text class="ink" x="708" y="166" font-size="31" font-weight="760">647</text>
-  <text class="muted" x="708" y="185" font-size="12">5 active sessions</text>
+  <rect class="panel" x="380" y="92" width="160" height="76" rx="8"/>
+  <text class="muted" x="396" y="118" font-size="12">Weekly remaining</text>
+  <text class="green" x="396" y="150" font-size="27" font-weight="760">95%</text>
 
-  <rect class="panel" x="34" y="222" width="852" height="154" rx="8"/>
-  <text class="ink" x="56" y="253" font-size="18" font-weight="720">Rolling trend</text>
-  <text class="muted" x="56" y="276" font-size="13">Choose your cadence; blue bars show token volume and green line shows remaining percent.</text>
+  <rect class="panel" x="556" y="92" width="174" height="76" rx="8"/>
+  <text class="muted" x="572" y="118" font-size="12">Cadence examples</text>
+  <text class="ink" x="572" y="143" font-size="17" font-weight="720">daily / hourly</text>
+  <text class="muted" x="572" y="160" font-size="12">custom windows</text>
 
-  <line class="grid" x1="78" y1="330" x2="832" y2="330"/>
-  <line class="grid" x1="78" y1="304" x2="832" y2="304"/>
-  <line class="grid" x1="78" y1="278" x2="832" y2="278"/>
-  <line class="axis" x1="78" y1="330" x2="832" y2="330"/>
+  <rect class="panel" x="28" y="190" width="702" height="82" rx="8"/>
+  <text class="ink" x="44" y="218" font-size="15" font-weight="720">Rolling snapshots</text>
+  <text class="muted" x="606" y="218" font-size="12">tokens</text>
+  <circle class="blue" cx="596" cy="214" r="4"/>
+  <text class="muted" x="674" y="218" font-size="12">remaining</text>
+  <circle class="green" cx="664" cy="214" r="4"/>
 
-  <rect class="blue" x="96" y="304" width="28" height="26" rx="5"/>
-  <rect class="blue" x="156" y="286" width="28" height="44" rx="5"/>
-  <rect class="blue" x="216" y="296" width="28" height="34" rx="5"/>
-  <rect class="blue" x="276" y="266" width="28" height="64" rx="5"/>
-  <rect class="blue" x="336" y="250" width="28" height="80" rx="5"/>
-  <rect class="blue" x="396" y="272" width="28" height="58" rx="5"/>
-  <rect class="blue" x="456" y="236" width="28" height="94" rx="5"/>
-  <rect class="blue" x="516" y="244" width="28" height="86" rx="5"/>
-  <rect class="blue" x="576" y="258" width="28" height="72" rx="5"/>
-  <rect class="blue" x="636" y="282" width="28" height="48" rx="5"/>
-  <rect class="blue" x="696" y="292" width="28" height="38" rx="5"/>
-  <rect class="blue" x="756" y="256" width="28" height="74" rx="5"/>
+  <line class="grid" x1="44" y1="260" x2="704" y2="260"/>
+  <line class="grid" x1="44" y1="242" x2="704" y2="242"/>
 
-  <polyline points="110,242 170,244 230,246 290,248 350,249 410,251 470,252 530,254 590,255 650,256 710,258 770,259" fill="none" stroke="#0f9d58" stroke-width="3"/>
-  <circle class="green" cx="770" cy="259" r="4"/>
+  <rect class="blue" x="70" y="244" width="18" height="16" rx="4"/>
+  <rect class="blue" x="122" y="238" width="18" height="22" rx="4"/>
+  <rect class="blue" x="174" y="242" width="18" height="18" rx="4"/>
+  <rect class="blue" x="226" y="232" width="18" height="28" rx="4"/>
+  <rect class="blue" x="278" y="226" width="18" height="34" rx="4"/>
+  <rect class="blue" x="330" y="234" width="18" height="26" rx="4"/>
+  <rect class="blue" x="382" y="222" width="18" height="38" rx="4"/>
+  <rect class="blue" x="434" y="230" width="18" height="30" rx="4"/>
+  <rect class="blue" x="486" y="236" width="18" height="24" rx="4"/>
+  <rect class="blue" x="538" y="242" width="18" height="18" rx="4"/>
+  <rect class="blue" x="590" y="234" width="18" height="26" rx="4"/>
+  <rect class="blue" x="642" y="228" width="18" height="32" rx="4"/>
 
-  <text class="muted" x="78" y="354" font-size="12">05-17 00:00</text>
-  <text class="muted" x="725" y="354" font-size="12">05-18 09:00</text>
-  <circle class="blue" cx="590" cy="252" r="5"/>
-  <text class="muted" x="602" y="256" font-size="12">tokens</text>
-  <circle class="green" cx="664" cy="252" r="5"/>
-  <text class="muted" x="676" y="256" font-size="12">remaining</text>
+  <polyline points="79,233 131,234 183,235 235,236 287,237 339,238 391,239 443,240 495,241 547,242 599,243 651,244" fill="none" stroke="#0f9d58" stroke-width="2.5"/>
+  <circle class="green" cx="651" cy="244" r="4"/>
 </svg>
