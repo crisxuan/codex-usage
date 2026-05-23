@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-18T22:43:37+08:00",
+  "updatedAt": "2026-05-23T17:35:21+08:00",
   "snapshots": [
     {
       "generatedAt": "2026-05-18T11:03:09+08:00",
@@ -111,6 +111,28 @@
       "secondaryUsedPercentLatest": 10.0,
       "secondaryRemainingPercentLatest": 90.0,
       "secondaryResetsAt": "2026-05-24T08:14:45+08:00"
+    },
+    {
+      "generatedAt": "2026-05-23T17:35:21+08:00",
+      "bucketStart": "2026-05-23T15:00:00+08:00",
+      "windowStart": "2026-05-23T14:35:11.756421+08:00",
+      "windowEnd": "2026-05-23T17:35:11.756421+08:00",
+      "sessionCount": 3,
+      "tokenEventCount": 151,
+      "inputTokens": 10236667,
+      "cachedInputTokens": 9377152,
+      "nonCachedInputTokens": 859515,
+      "outputTokens": 69242,
+      "reasoningOutputTokens": 29546,
+      "totalTokens": 10305909,
+      "totalCostUSD": 11.063410999999999,
+      "totalCredits": 276.58527499999997,
+      "primaryUsedPercentLatest": null,
+      "primaryRemainingPercentLatest": null,
+      "primaryResetsAt": null,
+      "secondaryUsedPercentLatest": null,
+      "secondaryRemainingPercentLatest": null,
+      "secondaryResetsAt": null
     }
   ]
 }

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
   <title>Codex Usage Estimator</title>
   <style>
     :root {
@@ -57,9 +58,30 @@
       border-color: var(--green);
       color: var(--green);
     }
+    .examples {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .example {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+    .example strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+    .example span {
+      color: var(--muted);
+      font-size: 14px;
+    }
     @media (max-width: 640px) {
       .link { display: flex; width: max-content; }
       .link + .link { margin-left: 0; }
+      .examples { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -73,6 +95,21 @@
       <p>最近更新时间：2026-05-18 09:58 +08:00。</p>
       <a class="link" href="./usage/weekly-latest.html">打开最新每周用量统计</a>
       <a class="link" href="./usage/hourly-latest.html">打开滚动看板示例</a>
+      <a class="link" href="./usage/examples.html">查看用量案例</a>
+      <div class="examples">
+        <div class="example">
+          <strong>总量趋势</strong>
+          <span>快速判断哪个时间段 token 突然变大。</span>
+        </div>
+        <div class="example">
+          <strong>费用拆分</strong>
+          <span>看 cached input、fresh input、output 分别贡献多少。</span>
+        </div>
+        <div class="example">
+          <strong>限额窗口</strong>
+          <span>用 reset 时间对齐 Settings 里的 weekly remaining。</span>
+        </div>
+      </div>
     </section>
   </main>
 </body>
